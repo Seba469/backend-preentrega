@@ -81,18 +81,13 @@ export default class ProductManager{
             if (producto != null){
                 productoNuevo = {...producto, ...infoNueva}
                 indice = productos.findIndex(prod => prod.id === id)
+                
                 productos[indice] = productoNuevo
+                await fs.promises.writeFile(path, JSON.stringify(productos, null, '\t'))
             }else{
                 return null
             }
-            console.log(producto)
-            console.log('--------------')
-            console.log(productoNuevo)
-            console.log('--------------')
-            console.log(indice)
-            console.log('--------------')
-            console.log(productos)
-            // await fs.promises.writeFile(path, JSON.stringify(productos, null, '\t'))
+            
         }
         catch(error){
             console.log(error)

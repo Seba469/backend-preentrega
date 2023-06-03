@@ -11,13 +11,10 @@
 		"id": "de00fd2e-6c4a-426c-b5cb-c2cc71aaf543"
 	},
 	{
-		"nombre": "buzo",
-		"descripcion": "buzo talle L",
-		"precio": 250,
-		"img": [
-			"www.images/buzo.jpg",
-			"www.images/buzo1.jpg"
-		],
+		"nombre": "remera",
+		"descripcion": "remera roja talle L",
+		"precio": 10000,
+		"img": "www.images/remeraRojo.jpg",
 		"stock": 15,
 		"id": "d0e73223-20f8-4a9b-898a-b0b775257b9d"
 	},
