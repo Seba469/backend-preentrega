@@ -12,7 +12,12 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     const producto = await productManager.getProductById(req.params.id)
-    res.send(producto)
+    
+    if (producto != null){
+        res.send(producto)
+    }else{
+        res.send({status: "Ese producto no exite"})
+    }
 })
 
 router.post('/', async (req, res) => {
@@ -21,8 +26,13 @@ router.post('/', async (req, res) => {
 });
 
 router.delete('/:id', async (req, res) => {
-    productManager.deletProduct(req.params.id)
-    res.send({ status: "success" });
+    const resultado = await productManager.deletProduct(req.params.id)
+
+    if (resultado === null){
+        res.send({status: "Ese producto no exite"})
+    }else{
+        res.send({ status: "success" });
+    }  
 })
 
 router.put('/:id', async (req, res) => {
@@ -30,8 +40,13 @@ router.put('/:id', async (req, res) => {
     console.log(req.params.id)
     console.log(req.body)
     console.log('***********')
-    productManager.updateProduct(req.params.id, req.body)
-    res.send({ status: "success" });
+    const resultado = await productManager.updateProduct(req.params.id, req.body)
+
+    if (resultado === null){
+        res.send({status: "Ese producto no exite"})
+    }else{
+        res.send({ status: "success" });
+    }  
 })
 
 export default router;

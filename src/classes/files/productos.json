@@ -1,1 +1,35 @@
-[]
+[
+	{
+		"nombre": "remera",
+		"descripcion": "remera talle L",
+		"precio": 250,
+		"img": [
+			"www.images/remera.jpg",
+			"www.images/remera1.jpg"
+		],
+		"stock": 15,
+		"id": "de00fd2e-6c4a-426c-b5cb-c2cc71aaf543"
+	},
+	{
+		"nombre": "buzo",
+		"descripcion": "buzo talle L",
+		"precio": 250,
+		"img": [
+			"www.images/buzo.jpg",
+			"www.images/buzo1.jpg"
+		],
+		"stock": 15,
+		"id": "d0e73223-20f8-4a9b-898a-b0b775257b9d"
+	},
+	{
+		"nombre": "pantalon",
+		"descripcion": "pantalon talle L",
+		"precio": 250,
+		"img": [
+			"www.images/pantalon.jpg",
+			"www.images/pantalon1.jpg"
+		],
+		"stock": 15,
+		"id": "ac595be9-8d52-472e-9b10-b00215d2cf0b"
+	}
+]
